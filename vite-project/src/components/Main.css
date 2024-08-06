@@ -1,0 +1,274 @@
+.container{
+    width:100%;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+.greeting{
+    width:100%;
+    margin-top: 80px;
+    padding-left: 50px;
+}
+.greeting h1{
+    background: linear-gradient(to right,gray,hsl(300, 100%, 90%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    margin:10px
+}
+
+.greeting .main{
+    font-size: 45px;
+    background: linear-gradient(to right,hsl(240, 100%, 60%),hsl(300, 100%, 90%));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header img{
+    max-width: 40px;
+    height:40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.searchbox{
+    display: flex;
+    width: 80%;
+    gap:1rem;
+    border-radius: 40px;
+    height: 70px;
+    align-items: center;
+    padding: 0px 5px;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.searchbox input{
+    flex:1;
+    border:none;
+    outline: none;
+    background-color: transparent;
+    text-indent: 15px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.searchbox-img img{
+     max-width: 30px;
+     border-radius: 50%;
+     cursor: pointer;
+}
+
+.content{
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    height:73vh;
+    align-items: center;
+    gap:2rem;
+}
+
+.content >*{
+    width: 100%;
+}
+
+.features{
+    display: flex;
+    gap:3rem;
+    justify-content: center;
+    height: 250px;
+}
+
+.features-content{
+    width:250px;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 90%);
+    cursor: pointer;
+    position: relative;
+}
+
+.features-content:hover{
+    background-color: hsl(0, 0%, 80%);
+}
+
+.features-content img{
+    max-width: 40px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right:10px;
+}
+
+footer{
+    position: absolute;
+    width: 90%;
+    bottom: 0; 
+    left: 60px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat-UI{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    height: 70vh;
+    gap: 1rem;
+    overflow-y: scroll;
+    width:80%;
+    margin-left: 50px;
+}
+
+.chat-UI p,.result-text{
+    width:100%;
+}
+
+.chat-UI img{
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.result img{
+    align-self: flex-start;
+}
+
+
+.prompt,.result{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    padding:5px 10px;
+}
+
+.prompt p{
+    font-weight: 700;
+    line-height: 1.5rem;   
+}
+
+hr{
+    height: 30px;
+    background-size: 800px 50px;
+    background-color: blue;
+    background: linear-gradient(to right, hsl(240, 100%, 60%),hsl(0, 0%, 70%),hsl(240, 100%, 60%));
+    animation: loader 3s infinite linear;
+    
+}
+.responsive{
+    display: none;
+}
+
+.something{
+    display: none;
+}
+
+@keyframes loader {
+    0%{
+        background-position: -800px 0;
+    }
+
+    100%{
+        background-position: 0 800px;
+    }
+    
+}
+
+@media (max-width:700px) {
+    .content{
+        padding:0;
+    }
+
+    .greeting{
+        margin-top:0;
+        padding: 20px 10px;
+    }
+
+    .features{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+        padding: 10px 5px;
+        margin-left:30px;
+    }
+
+    .features-content{
+        width: 95%;
+        height:150px;
+    }
+
+    .features-content img{
+        max-width: 30px;
+    }
+
+    footer{
+      display: none;
+    }
+    .responsive{
+        display: block;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .responsive p{
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .searchbox{
+        width:90%;
+    }
+    
+    .searchbox-img img{
+        max-width: 30px;
+    }
+    header{
+        box-shadow: 1px 2px 2px gray;
+        width:112%;
+    }
+    .chat-UI{
+        margin: 0;
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .something{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left:0;
+        text-align: center;
+        padding-left:10px;
+    }
+
+    .something .searchbox{
+        width:95%;
+    }
+}
+
+@media (max-width:1300px) {
+    .container{
+         width:90vw;
+    }
+
+    .features{
+       gap:0.8rem;
+    }
+    
+}
